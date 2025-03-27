@@ -1,12 +1,24 @@
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
+/* html {
+  font-size: 62.5%;
+} */
+
+:root {
+  --cor: #f5eedc;
+  --navHeight: 93px;
+  --navFooter: 91px;
+  --header: 91px;
+}
 a {
   font-size: 2rem;
-  color: #f5eedc;
+  color: var(--cor);
 }
 
 a:hover {
@@ -21,6 +33,14 @@ div > p {
   margin-top: 10px;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  min-height: calc(
+    (100vh - var(--navHeight)) - var(--header) - var(--navFooter)
+  );
+}
+
 h1 {
   color: #f5eedc;
   text-align: center;
@@ -30,8 +50,6 @@ h1 {
 
 footer {
   background-color: #dda853;
-  position: absolute;
-  bottom: 0%;
   width: 100%;
 }
 
@@ -42,9 +60,7 @@ footer p {
 
 body {
   background-color: #27548a;
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 
 figure {
@@ -68,26 +84,33 @@ input {
 
 .container {
   display: flex;
-  justify-content: space-evenly;
+  position: relative;
+  justify-content: space-between;
   padding: 1.5rem;
   background-color: #dda853;
+  max-height: var(--navHeight);
+  min-height: var(--navHeight);
 }
 
 .container2 {
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   align-items: center;
   gap: 20px;
-  padding: 20px;
-  min-height: 60vh;
 }
 
-.container2 > div {
+.container2 > section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container2 > section .card {
   display: flex;
   align-items: center;
   gap: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 10px;
   min-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
