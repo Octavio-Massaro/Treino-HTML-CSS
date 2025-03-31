@@ -13,6 +13,9 @@ body {
 .product {
   position: relative;
   border: 4px solid black;
+  display: grid;
+  column-gap: 40px;
+  grid-template-columns: 250px 1fr 1fr;
   width: 825px;
   margin: 50px auto;
 }
@@ -23,6 +26,7 @@ body {
   text-transform: uppercase;
   background-color: #f7f7f7;
   padding: 15px;
+  grid-column: 1 / -1;
 }
 
 /* PRODUCT INFORMATION */
@@ -77,6 +81,7 @@ body {
   width: 100%;
   padding: 15px;
   border-top: 4px solid black;
+  grid-column: 1 / -1;
 }
 
 .add-cart:hover {
@@ -130,12 +135,12 @@ body {
   background-color: #a52a2a;
 }
 
-.flex-container {
+/* .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-}
+} */
 
 .price-container {
   display: flex;
