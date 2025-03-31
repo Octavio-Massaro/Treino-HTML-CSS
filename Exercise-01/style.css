@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,12 +35,13 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: #777;
-  margin-bottom: 20px;
 }
 
 .more-info:link,
 .more-info:visited {
   color: black;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .more-info:hover,
@@ -51,12 +53,17 @@ body {
 .details-title {
   text-transform: uppercase;
   font-size: 16px;
-  margin-top: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .details-list {
   list-style: square;
   margin-left: 20px;
+}
+
+.details-list li {
+  margin-bottom: 10px;
 }
 
 /* BUTTON */
@@ -77,10 +84,6 @@ body {
   background-color: #fff;
 }
 
-.details-list li {
-  margin-bottom: 10px;
-}
-
 .sale {
   position: absolute;
   top: -17px;
@@ -97,15 +100,14 @@ body {
 }
 
 .colors {
-  margin: 30px 0 0 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .color-container {
-  display: inline-block;
   width: 25px;
   height: 25px;
   background-color: #000;
-  margin-right: 10px;
 }
 
 .color-blue {
@@ -126,4 +128,29 @@ body {
 
 .color-brown {
   background-color: #a52a2a;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  flex: 1;
+  margin-top: 20px;
+}
+
+.detail-product {
+  flex: 1;
+  margin-top: 20px;
 }
